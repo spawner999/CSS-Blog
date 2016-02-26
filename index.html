@@ -2,11 +2,27 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="css/main.css" media="screen" title="no title" charset="utf-8">
     <title>Blog</title>
   </head>
   <body>
     <div class="page">
+      <header>
+        <picture>
+          <source srcset="img/milan.png" media="(min-width: 500px)">
+          <img src="img/milan-sm.jpg" alt="" />
+      </picture>
+        <nav>
+          <ul>
+            <li><a href="#">foo</a></li>
+            <li><a href="#">foo</a></li>
+            <li><a href="#">foo</a></li>
+            <li><a href="#">foo</a></li>
+          </ul>
+        </nav>
+
+      </header>
       <section class="featured">
         <div class="featured__header">
           <h1>featured</h1>
@@ -15,12 +31,17 @@
           <img src="" alt="" />
           <div class="featured__article">
             <div class="featured__article__text">
+              <h2>Title</h2>
+              <p> Content
+              </p>
+            </div>
+            <div class="featured__article__image">
             </div>
           </div>
           <form class="featured__comment">
             <label for=""></label>
-            <textarea name="name" rows="8" cols="40"></textarea>
-          </div>
+            <textarea name="name" rows="4"></textarea>
+          </form>
 
       </section>
 
@@ -65,12 +86,14 @@
             </article>
           </div>
         </div>
-
       </div>
       </section>
-
-
     </div>
+
+    <footer>
+      <h1>A footer</h1>
+    </footer>
+
 
   </body>
 </html>

@@ -63,9 +63,8 @@
   @include media(map-get($breakpoints, 'medium')) {
     @include span-columns(3);
   }
-  // @include media(map-get($breakpoints, 'large')) {
-  //    @include span-columns(12);
-  // }
+  color: red;
+  text-align: center;
  }
 
 %section__wrapper {
@@ -107,12 +106,5 @@
   @include span-columns(4);
   @include media(map-get($breakpoints, 'medium')) {
     @include span-columns(4);
-  }
-}
-
-%article--tertiary {
-  @include span-columns(2);
-  @include media(map-get($breakpoints, 'medium')) {
-    @include span-columns(2);
   }
 }

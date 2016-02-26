@@ -47,6 +47,9 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+source {
+  height: 0; }
+
 /**
  * Set up a decent box model on the root element
  */
@@ -63,11 +66,6 @@ html {
   box-sizing: inherit; }
 
 /* For testing only */
-*:not(body):not(html) {
-  box-sizing: border-box;
-  border: 1px dashed #000;
-  min-height: 100px; }
-
 /* End for testing */
 /**
  * Basic styles for links
@@ -87,7 +85,8 @@ section {
  */
 body {
   color: #222222;
-  font: normal 125%/1.4 "Open Sans", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
+  font: normal 125%/1.4 "Open Sans", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  background-color: #F2F2F2; }
 
 /**
  * Clear inner floats
@@ -151,7 +150,9 @@ section::after {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 100%; }
+  width: 100%;
+  color: red;
+  text-align: center; }
   .featured__header:last-child, .month__header:last-child {
     margin-right: 0; }
   @media screen and (min-width: 768px) {
@@ -195,20 +196,20 @@ section::after {
       .month__primary:last-child, .month__secondary:last-child {
         margin-right: 0; } }
 
-.month__primary__article {
+.featured__article, .month__primary__article {
   float: left;
   display: block;
   margin-right: 2.35765%;
   width: 100%; }
-  .month__primary__article:last-child {
+  .featured__article:last-child, .month__primary__article:last-child {
     margin-right: 0; }
   @media screen and (min-width: 768px) {
-    .month__primary__article {
+    .featured__article, .month__primary__article {
       float: left;
       display: block;
       margin-right: 2.35765%;
       width: 100%; }
-      .month__primary__article:last-child {
+      .featured__article:last-child, .month__primary__article:last-child {
         margin-right: 0; } }
 
 .month__secondary__article {
@@ -263,5 +264,65 @@ section::after {
   width: 95%;
   margin: auto;
   max-width: 1200px; }
+
+.featured__article {
+  margin: 1em 0; }
+  .featured__article__text {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 31.76157%;
+    text-align: center;
+    background: red;
+    height: 200px; }
+    .featured__article__text:last-child {
+      margin-right: 0; }
+    @media screen and (min-width: 768px) {
+      .featured__article__text {
+        height: 300px; } }
+  .featured__article__image {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 65.88078%;
+    background: url("../img/jack.jpeg");
+    height: 200px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat; }
+    .featured__article__image:last-child {
+      margin-right: 0; }
+    @media screen and (min-width: 768px) {
+      .featured__article__image {
+        height: 300px;
+        border: 1px dotted black; } }
+.featured__comment textarea {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%; }
+  .featured__comment textarea:last-child {
+    margin-right: 0; }
+
+header {
+  background-color: #F2F2F2; }
+  header img {
+    width: 100%; }
+  header picture source {
+    height: 0px; }
+
+ul {
+  display: block; }
+  ul::after {
+    clear: both;
+    content: "";
+    display: table; }
+  ul li {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 23.23176%;
+    text-align: center; }
+    ul li:last-child {
+      margin-right: 0; }
 
 /*# sourceMappingURL=main.css.map */

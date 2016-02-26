@@ -1,3 +1,22 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the header of the site/application.
 // -----------------------------------------------------------------------------
+header{
+  background-color: #F2F2F2;
+  img {
+    width: 100%;
+  }
+  picture{
+    source{
+      height: 0px;
+    }
+  }
+}
+ul {
+  @include row();
+  li {
+    @include span-columns(3);
+    text-align: center;
+  }
+
+}

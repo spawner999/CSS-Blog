@@ -11,7 +11,38 @@
   @include e(wrapper){
     @extend %section__wrapper;
   }
-}
+  @include e(article){
+    @extend %article--primary;
+    margin: 1em 0;
+    @include e(text){
+      @include span-columns(4);
+      text-align: center;
+      @include media(map-get($breakpoints, 'medium')) {
+        height: 300px;
+      }
+      background: red;
+      height: 200px;
+    }
+    @include e(image){
+      @include span-columns(8);
+      @include media(map-get($breakpoints, 'medium')) {
+        height: 300px;
+        border: 1px dotted black;
+      }
+      background: url("../img/jack.jpeg");
+      height: 200px;
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      }
+    }
+    @include e(comment){
+      textarea {
+        @include span-columns(12);
+      }
+    }
+  }
+
+
 
 .month {
   @include e(header){
