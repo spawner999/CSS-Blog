@@ -20,6 +20,12 @@ html {
 }
 /* For testing only */
 
+*:not(body):not(html) {
+  box-sizing:border-box;
+  border:1px dashed #000;
+    // min-height: 100px;
+}
+
 
 /* End for testing */
 /**
@@ -37,5 +43,10 @@ a {
 
 section {
   @extend %clearfix;
-  margin: 50px 0;
+  margin: 2em 0;
+  border-top: 1px solid black;
+}
+
+p{
+  font-size: 0.8em;
 }

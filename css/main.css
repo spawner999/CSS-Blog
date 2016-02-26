@@ -66,6 +66,10 @@ html {
   box-sizing: inherit; }
 
 /* For testing only */
+*:not(body):not(html) {
+  box-sizing: border-box;
+  border: 1px dashed #000; }
+
 /* End for testing */
 /**
  * Basic styles for links
@@ -78,7 +82,11 @@ a {
     text-decoration: underline; }
 
 section {
-  margin: 50px 0; }
+  margin: 2em 0;
+  border-top: 1px solid black; }
+
+p {
+  font-size: 0.8em; }
 
 /**
  * Basic typography style for copy text
@@ -164,100 +172,77 @@ section::after {
       .featured__header:last-child, .month__header:last-child {
         margin-right: 0; } }
 
-.featured__wrapper, .month__wrapper {
+.featured__article, .month__content {
   float: left;
   display: block;
   margin-right: 2.35765%;
   width: 100%; }
-  .featured__wrapper:last-child, .month__wrapper:last-child {
+  .featured__article:last-child, .month__content:last-child {
     margin-right: 0; }
   @media screen and (min-width: 768px) {
-    .featured__wrapper, .month__wrapper {
+    .featured__article, .month__content {
       float: left;
       display: block;
       margin-right: 2.35765%;
       width: 74.41059%; }
-      .featured__wrapper:last-child, .month__wrapper:last-child {
+      .featured__article:last-child, .month__content:last-child {
         margin-right: 0; } }
 
-.month__primary, .month__secondary {
+.featured__article__image, .month .first-row .month__primary, .month .first-row .month__secondary {
+  height: 250px; }
+  @media screen and (min-width: 768px) {
+    .featured__article__image, .month .first-row .month__primary, .month .first-row .month__secondary {
+      height: 300px; } }
+  @media screen and (min-width: 1024px) {
+    .featured__article__image, .month .first-row .month__primary, .month .first-row .month__secondary {
+      height: 400px; } }
+
+.month .first-row .month__primary {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 100%; }
-  .month__primary:last-child, .month__secondary:last-child {
+  width: 65.88078%; }
+  .month .first-row .month__primary:last-child {
     margin-right: 0; }
   @media screen and (min-width: 768px) {
-    .month__primary, .month__secondary {
+    .month .first-row .month__primary {
       float: left;
       display: block;
       margin-right: 2.35765%;
-      width: 48.82117%; }
-      .month__primary:last-child, .month__secondary:last-child {
+      width: 65.88078%; }
+      .month .first-row .month__primary:last-child {
         margin-right: 0; } }
 
-.featured__article, .month__primary__article {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 100%; }
-  .featured__article:last-child, .month__primary__article:last-child {
-    margin-right: 0; }
-  @media screen and (min-width: 768px) {
-    .featured__article, .month__primary__article {
-      float: left;
-      display: block;
-      margin-right: 2.35765%;
-      width: 100%; }
-      .featured__article:last-child, .month__primary__article:last-child {
-        margin-right: 0; } }
-
-.month__secondary__article {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 100%; }
-  .month__secondary__article:last-child {
-    margin-right: 0; }
-  @media screen and (min-width: 768px) {
-    .month__secondary__article {
-      float: left;
-      display: block;
-      margin-right: 2.35765%;
-      width: 100%; }
-      .month__secondary__article:last-child {
-        margin-right: 0; } }
-
-.month__secondary__article--small {
+.month .first-row .month__secondary {
   float: left;
   display: block;
   margin-right: 2.35765%;
   width: 31.76157%; }
-  .month__secondary__article--small:last-child {
+  .month .first-row .month__secondary:last-child {
     margin-right: 0; }
   @media screen and (min-width: 768px) {
-    .month__secondary__article--small {
+    .month .first-row .month__secondary {
       float: left;
       display: block;
       margin-right: 2.35765%;
       width: 31.76157%; }
-      .month__secondary__article--small:last-child {
+      .month .first-row .month__secondary:last-child {
         margin-right: 0; } }
 
-.month__secondary__article--small {
+.month .second-row .month__other {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 31.76157%; }
-  .month__secondary__article--small:last-child {
+  width: 100%; }
+  .month .second-row .month__other:last-child {
     margin-right: 0; }
   @media screen and (min-width: 768px) {
-    .month__secondary__article--small {
+    .month .second-row .month__other {
       float: left;
       display: block;
       margin-right: 2.35765%;
-      width: 31.76157%; }
-      .month__secondary__article--small:last-child {
+      width: 23.23176%; }
+      .month .second-row .month__other:last-child {
         margin-right: 0; } }
 
 .page {
@@ -265,43 +250,56 @@ section::after {
   margin: auto;
   max-width: 1200px; }
 
-.featured__article {
-  margin: 1em 0; }
-  .featured__article__text {
+.featured__article__image {
+  margin-bottom: 1em;
+  background: url("../img/jack.jpeg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat; }
+.featured__article__comment {
+  margin-top: 1em; }
+  .featured__article__comment textarea {
     float: left;
     display: block;
     margin-right: 2.35765%;
-    width: 31.76157%;
-    text-align: center;
-    background: red;
-    height: 200px; }
-    .featured__article__text:last-child {
+    width: 100%; }
+    .featured__article__comment textarea:last-child {
       margin-right: 0; }
-    @media screen and (min-width: 768px) {
-      .featured__article__text {
-        height: 300px; } }
-  .featured__article__image {
+  .featured__article__comment button {
     float: left;
     display: block;
     margin-right: 2.35765%;
-    width: 65.88078%;
-    background: url("../img/jack.jpeg");
-    height: 200px;
-    background-size: 100% 100%;
-    background-repeat: no-repeat; }
-    .featured__article__image:last-child {
+    width: 14.70196%; }
+    .featured__article__comment button:last-child {
       margin-right: 0; }
-    @media screen and (min-width: 768px) {
-      .featured__article__image {
-        height: 300px;
-        border: 1px dotted black; } }
-.featured__comment textarea {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 100%; }
-  .featured__comment textarea:last-child {
-    margin-right: 0; }
+
+.month .first-row {
+  display: block; }
+  .month .first-row::after {
+    clear: both;
+    content: "";
+    display: table; }
+  .month .first-row .month__primary {
+    overflow: hidden; }
+    .month .first-row .month__primary__image {
+      margin-bottom: 1em;
+      background: url("../img/jack.jpeg");
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      height: 80%; }
+  .month .first-row .month__secondary {
+    overflow: hidden; }
+    .month .first-row .month__secondary__image {
+      margin-bottom: 1em;
+      background: url("../img/jack-sm.jpg");
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      height: 50%; }
+.month .second-row {
+  display: block; }
+  .month .second-row::after {
+    clear: both;
+    content: "";
+    display: table; }
 
 header {
   background-color: #F2F2F2; }

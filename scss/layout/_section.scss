@@ -8,62 +8,71 @@
   @include e(header){
     @extend %section__header;
   }
-  @include e(wrapper){
-    @extend %section__wrapper;
-  }
   @include e(article){
-    @extend %article--primary;
-    margin: 1em 0;
-    @include e(text){
-      @include span-columns(4);
-      text-align: center;
-      @include media(map-get($breakpoints, 'medium')) {
-        height: 300px;
-      }
-      background: red;
-      height: 200px;
-    }
+    @extend %section__wrapper;
     @include e(image){
-      @include span-columns(8);
-      @include media(map-get($breakpoints, 'medium')) {
-        height: 300px;
-        border: 1px dotted black;
-      }
+      margin-bottom: 1em;
       background: url("../img/jack.jpeg");
-      height: 200px;
       background-size: 100% 100%;
       background-repeat: no-repeat;
+      @extend %background-img;
       }
-    }
+    @include e(text){
+
+      }
     @include e(comment){
+      margin-top: 1em;
       textarea {
         @include span-columns(12);
       }
+      button {
+        @include span-columns(2);
+      }
     }
   }
-
-
+}
 
 .month {
   @include e(header){
     @extend %section__header;
   }
-  @include e(wrapper){
+  @include e(content){
     @extend %section__wrapper;
   }
-  @include e(primary){
-    @extend %section__content;
-    @include e(article){
-      @extend %article--primary;
+  .first-row {
+    @include row();
+    .month__primary {
+      @extend %article--prim;
+      @extend %background-img;
+      overflow: hidden;
+      @include e(image){
+        margin-bottom: 1em;
+        background: url("../img/jack.jpeg");
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        height: 80%;
+      }
     }
-  }
-  @include e(secondary){
-    @extend %section__content;
-    @include e(article){
-      @extend %article--secondary--main;
-      @include m(small){
-        @extend %article--secondary--small;
+    .month__secondary {
+      @extend %article--sec;
+      @extend %background-img;
+      overflow: hidden;
+      @include e(image){
+        margin-bottom: 1em;
+        background: url("../img/jack-sm.jpg");
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        height: 50%;
       }
     }
   }
+  .second-row {
+    @include row();
+
+
+    .month__other {
+      @extend %article--oth;
+    }
+  }
+
 }
