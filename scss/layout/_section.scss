@@ -9,13 +9,14 @@
     @extend %section__header;
   }
   @include e(article){
+    .first-row{
+      @include row();
+      @extend %background-img;
+    }
     @extend %section__wrapper;
     @include e(image){
-      margin-bottom: 1em;
-      background: url("../img/jack.jpeg");
-      background-size: 100% 100%;
-      background-repeat: no-repeat;
-      @extend %background-img;
+      @include art-image("../img/jack.jpeg", 100%);
+
       }
     @include e(text){
 
@@ -24,9 +25,11 @@
       margin-top: 1em;
       textarea {
         @include span-columns(12);
+        margin: 1em 0;
       }
       button {
-        @include span-columns(2);
+        @include span-columns(3);
+        @extend %button;
       }
     }
   }
@@ -41,27 +44,27 @@
   }
   .first-row {
     @include row();
+    margin-bottom: 1em;
     .month__primary {
       @extend %article--prim;
       @extend %background-img;
       overflow: hidden;
       @include e(image){
-        margin-bottom: 1em;
-        background: url("../img/jack.jpeg");
-        background-size: 100% 100%;
-        background-repeat: no-repeat;
-        height: 80%;
-      }
+      @include art-image("../img/jack.jpeg", 65%);
+
     }
+    p {
+      height: 35%;
+    }
+  }
     .month__secondary {
       @extend %article--sec;
       @extend %background-img;
       overflow: hidden;
       @include e(image){
-        margin-bottom: 1em;
-        background: url("../img/jack-sm.jpg");
-        background-size: 100% 100%;
-        background-repeat: no-repeat;
+        @include art-image("../img/jack-sm.jpg", 50%);
+      }
+      p {
         height: 50%;
       }
     }
@@ -71,8 +74,14 @@
 
 
     .month__other {
+      margin-bottom: 1em;
       @extend %article--oth;
+      h1 {
+        background: rgba(0, 0, 0, 0.74);
+        color: white;
+        padding-left: 1em;
     }
   }
+}
 
 }

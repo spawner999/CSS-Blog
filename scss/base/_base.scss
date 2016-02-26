@@ -22,7 +22,7 @@ html {
 
 *:not(body):not(html) {
   box-sizing:border-box;
-  border:1px dashed #000;
+  // border:1px dashed #000;
     // min-height: 100px;
 }
 
@@ -49,4 +49,7 @@ section {
 
 p{
   font-size: 0.8em;
+  padding: 1em;
+  background-color: white;
+  border: 1px solid black;
 }
