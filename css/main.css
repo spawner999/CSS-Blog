@@ -65,9 +65,7 @@ html {
 /* For testing only */
 *:not(body):not(html) {
   box-sizing: border-box;
-  border: 1px dashed #000; }
-
-.columns {
+  border: 1px dashed #000;
   min-height: 100px; }
 
 /* End for testing */
@@ -75,11 +73,14 @@ html {
  * Basic styles for links
  */
 a {
-  color: #e50050;
+  color: red;
   text-decoration: none; }
   a:hover, a:active, a:focus {
     color: #222222;
     text-decoration: underline; }
+
+section {
+  margin: 50px 0; }
 
 /**
  * Basic typography style for copy text
@@ -91,7 +92,7 @@ body {
 /**
  * Clear inner floats
  */
-.clearfix::after {
+section::after {
   clear: both;
   content: '';
   display: table; }
@@ -142,5 +143,47 @@ body {
   padding: 0;
   position: absolute;
   width: 1px; }
+
+/**
+ Placeholder Variables
+ */
+.featured__header, .month__header {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%; }
+  .featured__header:last-child, .month__header:last-child {
+    margin-right: 0; }
+  @media screen and (min-width: 768px) {
+    .featured__header, .month__header {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 14.70196%; }
+      .featured__header:last-child, .month__header:last-child {
+        margin-right: 0; } }
+
+.featured__wrapper, .month__wrapper {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%; }
+  .featured__wrapper:last-child, .month__wrapper:last-child {
+    margin-right: 0; }
+  @media screen and (min-width: 768px) {
+    .featured__wrapper, .month__wrapper {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 82.94039%; }
+      .featured__wrapper:last-child, .month__wrapper:last-child {
+        margin-right: 0; } }
+
+.month__primary, .month__secondary {
+  display: block; }
+  .month__primary::after, .month__secondary::after {
+    clear: both;
+    content: "";
+    display: table; }
 
 /*# sourceMappingURL=main.css.map */

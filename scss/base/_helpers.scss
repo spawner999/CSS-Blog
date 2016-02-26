@@ -5,7 +5,7 @@
 /**
  * Clear inner floats
  */
-.clearfix::after {
+%clearfix::after {
   clear: both;
   content: '';
   display: table;
@@ -43,7 +43,7 @@
  * Shamelessly borrowed from HTML5Boilerplate:
  * https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css#L119-L133
  */
-.visually-hidden { 
+.visually-hidden {
   border: 0;
   clip: rect(0 0 0 0);
   height: 1px;
@@ -52,4 +52,29 @@
   padding: 0;
   position: absolute;
   width: 1px;
+}
+
+/**
+ Placeholder Variables
+ */
+
+ %section__header{
+  @include span-columns(12);
+  @include media(map-get($breakpoints, 'medium')) {
+    @include span-columns(2);
+  }
+  // @include media(map-get($breakpoints, 'large')) {
+  //    @include span-columns(12);
+  // }
+ }
+
+%section__wrapper {
+  @include span-columns(12);
+  @include media(map-get($breakpoints, 'medium')) {
+    @include span-columns(10);
+  }
+}
+
+%section__row {
+  @include row();
 }

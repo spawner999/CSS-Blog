@@ -1,0 +1,24 @@
+
+.featured {
+  @include e(header){
+    @extend %section__header;
+  }
+  @include e(wrapper){
+    @extend %section__wrapper;
+  }
+}
+
+.month {
+  @include e(header){
+    @extend %section__header;
+  }
+  @include e(wrapper){
+    @extend %section__wrapper;
+  }
+  @include e(primary){
+    @extend %section__row;
+  }
+  @include e(secondary){
+    @extend %section__row;
+  }
+}

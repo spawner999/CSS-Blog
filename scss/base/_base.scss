@@ -23,22 +23,25 @@ html {
 *:not(body):not(html) {
   box-sizing:border-box;
   border:1px dashed #000;
+    min-height: 100px;
 }
 
-.columns {
-  min-height: 100px;
-}
 
 /* End for testing */
 /**
  * Basic styles for links
  */
 a {
-  color: $brand-color;
+  color: red;
   text-decoration: none;
 
   @include on-event {
     color: $text-color;
     text-decoration: underline;
   }
+}
+
+section {
+  @extend %clearfix;
+  margin: 50px 0;
 }
