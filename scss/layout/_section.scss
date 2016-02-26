@@ -1,4 +1,9 @@
 
+.page {
+  width: 95%;
+  margin: auto;
+  max-width: 1200px;
+}
 .featured {
   @include e(header){
     @extend %section__header;
@@ -16,9 +21,18 @@
     @extend %section__wrapper;
   }
   @include e(primary){
-    @extend %section__row;
+    @extend %section__content;
+    @include e(article){
+      @extend %article--primary;
+    }
   }
   @include e(secondary){
-    @extend %section__row;
+    @extend %section__content;
+    @include e(article){
+      @extend %article--secondary--main;
+      @include m(small){
+        @extend %article--secondary--small;
+      }
+    }
   }
 }

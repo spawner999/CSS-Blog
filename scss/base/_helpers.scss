@@ -61,7 +61,7 @@
  %section__header{
   @include span-columns(12);
   @include media(map-get($breakpoints, 'medium')) {
-    @include span-columns(2);
+    @include span-columns(3);
   }
   // @include media(map-get($breakpoints, 'large')) {
   //    @include span-columns(12);
@@ -71,10 +71,48 @@
 %section__wrapper {
   @include span-columns(12);
   @include media(map-get($breakpoints, 'medium')) {
-    @include span-columns(10);
+    @include span-columns(9);
   }
 }
 
-%section__row {
-  @include row();
+%section__content {
+  @include span-columns(12);
+  @include media(map-get($breakpoints, 'medium')) {
+    @include span-columns(6);
+  }
+}
+
+%article--primary {
+  @include span-columns(12);
+  @include media(map-get($breakpoints, 'medium')) {
+    @include span-columns(12);
+  }
+}
+
+%article--secondary--main {
+  @include span-columns(12);
+  @include media(map-get($breakpoints, 'medium')) {
+    @include span-columns(12);
+  }
+}
+
+%article--secondary--small {
+  @include span-columns(4);
+  @include media(map-get($breakpoints, 'medium')) {
+    @include span-columns(4);
+  }
+}
+
+%article--secondary--small {
+  @include span-columns(4);
+  @include media(map-get($breakpoints, 'medium')) {
+    @include span-columns(4);
+  }
+}
+
+%article--tertiary {
+  @include span-columns(2);
+  @include media(map-get($breakpoints, 'medium')) {
+    @include span-columns(2);
+  }
 }

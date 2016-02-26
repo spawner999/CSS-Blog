@@ -159,7 +159,7 @@ section::after {
       float: left;
       display: block;
       margin-right: 2.35765%;
-      width: 14.70196%; }
+      width: 23.23176%; }
       .featured__header:last-child, .month__header:last-child {
         margin-right: 0; } }
 
@@ -175,15 +175,93 @@ section::after {
       float: left;
       display: block;
       margin-right: 2.35765%;
-      width: 82.94039%; }
+      width: 74.41059%; }
       .featured__wrapper:last-child, .month__wrapper:last-child {
         margin-right: 0; } }
 
 .month__primary, .month__secondary {
-  display: block; }
-  .month__primary::after, .month__secondary::after {
-    clear: both;
-    content: "";
-    display: table; }
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%; }
+  .month__primary:last-child, .month__secondary:last-child {
+    margin-right: 0; }
+  @media screen and (min-width: 768px) {
+    .month__primary, .month__secondary {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 48.82117%; }
+      .month__primary:last-child, .month__secondary:last-child {
+        margin-right: 0; } }
+
+.month__primary__article {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%; }
+  .month__primary__article:last-child {
+    margin-right: 0; }
+  @media screen and (min-width: 768px) {
+    .month__primary__article {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 100%; }
+      .month__primary__article:last-child {
+        margin-right: 0; } }
+
+.month__secondary__article {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%; }
+  .month__secondary__article:last-child {
+    margin-right: 0; }
+  @media screen and (min-width: 768px) {
+    .month__secondary__article {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 100%; }
+      .month__secondary__article:last-child {
+        margin-right: 0; } }
+
+.month__secondary__article--small {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%; }
+  .month__secondary__article--small:last-child {
+    margin-right: 0; }
+  @media screen and (min-width: 768px) {
+    .month__secondary__article--small {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 31.76157%; }
+      .month__secondary__article--small:last-child {
+        margin-right: 0; } }
+
+.month__secondary__article--small {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%; }
+  .month__secondary__article--small:last-child {
+    margin-right: 0; }
+  @media screen and (min-width: 768px) {
+    .month__secondary__article--small {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 31.76157%; }
+      .month__secondary__article--small:last-child {
+        margin-right: 0; } }
+
+.page {
+  width: 95%;
+  margin: auto;
+  max-width: 1200px; }
 
 /*# sourceMappingURL=main.css.map */
