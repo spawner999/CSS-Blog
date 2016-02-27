@@ -2,7 +2,7 @@
 .page {
   width: 95%;
   margin: auto;
-  max-width: 1200px;
+  max-width: 1300px;
 }
 .featured {
   @include e(header){
@@ -30,6 +30,10 @@
       button {
         @include span-columns(3);
         @extend %button;
+        font-size: 1em;
+      }
+      label {
+        font-weight: bold;
       }
     }
   }

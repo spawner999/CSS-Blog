@@ -1,3 +1,14 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the footer of the site/application.
 // -----------------------------------------------------------------------------
+footer {
+  height: 125px;
+  padding: 2em;
+  border-top: 1px solid black;
+  background-image: url("../img/milan-footer.png");
+  background-size: 100% 100%;
+  a {
+    color: $black;
+    font-size: 2em;
+  }
+}

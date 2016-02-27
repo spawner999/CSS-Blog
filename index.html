@@ -3,35 +3,37 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/main.css" media="screen" title="no title" charset="utf-8">
     <title>Blog</title>
   </head>
   <body>
     <div class="page">
       <header>
+
         <picture>
           <source srcset="img/milan.png" media="(min-width: 500px)">
           <img src="img/milan-sm.jpg" alt="" />
       </picture>
         <nav>
           <ul>
-            <li><a href="#">foo</a></li>
-            <li><a href="#">foo</a></li>
-            <li><a href="#">foo</a></li>
-            <li><a href="#">foo</a></li>
+            <li><a href="#"><i class="fa fa-home"></i></a></li>
+            <li><a href="#">archive</a></li>
+            <li><a href="#">about</a></li>
+            <li><a href="#">contact</a></li>
           </ul>
         </nav>
-
       </header>
+
       <section class="featured">
         <div class="featured__header">
           <h1>featured</h1>
         </div>
         <div class="featured__article">
           <div class="first-row">
-            <div class="featured__article__image">
+            <a href="#"><div class="featured__article__image">
               <h2>Lorem</h2>
-            </div>
+            </div></a>
           </div>
 
           <div class="featured__article__text">
@@ -56,22 +58,18 @@
               <div class="month__primary__image">
                 <h2>Lorem</h2>
               </div>
-
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
               </p>
-
             </article>
             <article class="month__secondary">
               <div class="month__secondary__image">
                 <h2>Lorem</h2>
               </div>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.
               </p>
-
             </article>
-
             </div>
             <div class="second-row">
               <article class="month__other">
@@ -101,21 +99,17 @@
                 </p>
               </article>
             </div>
-
-
           </div>
-
-
-
-        </div>
-
       </section>
+
+      <footer>
+        <ul>
+          <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
+          <li><a href="#"><i class="fa fa-twitter-square"></i></a></li>
+          <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+        </ul>
+      </footer>
+
     </div>
-
-    <footer>
-      <h1>A footer</h1>
-    </footer>
-
-
   </body>
 </html>
