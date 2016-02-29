@@ -2,13 +2,17 @@
 .page {
   width: 95%;
   margin: auto;
-  max-width: 1300px;
+  max-width: 1200px;
 }
 .featured {
   @include e(header){
     @extend %section__header;
+    .previous{
+      @extend %side-list;
+    }
   }
   @include e(article){
+    border: 1px solid black;
     .first-row{
       @include row();
       @extend %background-img;
@@ -25,10 +29,9 @@
       margin-top: 1em;
       textarea {
         @include span-columns(12);
-        margin: 1em 0;
       }
       button {
-        @include span-columns(3);
+        @include span-columns(4);
         @extend %button;
         font-size: 1em;
       }
@@ -42,13 +45,15 @@
 .month {
   @include e(header){
     @extend %section__header;
+    .previous {
+      @extend %side-list;
+    }
   }
   @include e(content){
     @extend %section__wrapper;
   }
   .first-row {
     @include row();
-    margin-bottom: 1em;
     .month__primary {
       @extend %article--prim;
       @extend %background-img;
@@ -66,7 +71,7 @@
       @extend %background-img;
       overflow: hidden;
       @include e(image){
-        @include art-image("../img/jack-sm.jpg", 50%);
+        @include art-image("../img/jack-sm.jpg", 65%);
       }
       p {
         height: 50%;
@@ -80,12 +85,21 @@
     .month__other {
       margin-bottom: 1em;
       @extend %article--oth;
-      h1 {
-        background: rgba(0, 0, 0, 0.74);
-        color: white;
-        padding-left: 1em;
     }
   }
+  .third-row{
+    @include row();
+    .month__other{
+      margin-bottom: 1em;
+      border: 1px solid black;
+    }
+  }
+
 }
+
+.sidebar {
+@include span-columns(2);
+background-color: black;
+height: 100vh;
 
 }

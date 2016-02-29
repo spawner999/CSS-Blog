@@ -74,10 +74,10 @@ html {
  * Basic styles for links
  */
 a {
-  color: red;
+  color: black;
   text-decoration: none; }
   a:hover, a:active, a:focus {
-    color: #222222;
+    color: red;
     text-decoration: underline; }
 
 section {
@@ -87,8 +87,13 @@ section {
 p {
   font-size: 0.8em;
   padding: 1em;
-  background-color: white;
-  border: 1px solid black; }
+  background-color: #f7f7f7; }
+
+h2 {
+  padding-left: .5em;
+  background-color: black;
+  color: white;
+  font-size: 1.2em; }
 
 /**
  * Basic typography style for copy text
@@ -101,7 +106,7 @@ body {
 /**
  * Clear inner floats
  */
-section::after {
+section::after, footer::after {
   clear: both;
   content: '';
   display: table; }
@@ -193,19 +198,21 @@ section::after {
         margin-right: 0; } }
 
 .featured__article .first-row, .month .first-row .month__primary, .month .first-row .month__secondary {
-  height: 250px; }
+  height: 300px; }
   @media screen and (min-width: 768px) {
     .featured__article .first-row, .month .first-row .month__primary, .month .first-row .month__secondary {
-      height: 300px; } }
+      height: 350px; } }
   @media screen and (min-width: 1024px) {
     .featured__article .first-row, .month .first-row .month__primary, .month .first-row .month__secondary {
-      height: 400px; } }
+      height: 450px; } }
 
 .month .first-row .month__primary {
+  border: 1px solid black;
+  margin-bottom: 1em;
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 65.88078%; }
+  width: 100%; }
   .month .first-row .month__primary:last-child {
     margin-right: 0; }
   @media screen and (min-width: 768px) {
@@ -213,27 +220,33 @@ section::after {
       float: left;
       display: block;
       margin-right: 2.35765%;
-      width: 74.41059%; }
+      width: 48.82117%; }
       .month .first-row .month__primary:last-child {
         margin-right: 0; } }
 
 .month .first-row .month__secondary {
+  border: 1px solid black;
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 31.76157%; }
+  width: 100%; }
   .month .first-row .month__secondary:last-child {
     margin-right: 0; }
+  .month .first-row .month__secondary .month__secondary__image {
+    display: none; }
   @media screen and (min-width: 768px) {
     .month .first-row .month__secondary {
       float: left;
       display: block;
       margin-right: 2.35765%;
-      width: 23.23176%; }
+      width: 48.82117%; }
       .month .first-row .month__secondary:last-child {
-        margin-right: 0; } }
+        margin-right: 0; }
+      .month .first-row .month__secondary .month__secondary__image {
+        display: block; } }
 
 .month .second-row .month__other {
+  border: 1px solid black;
   float: left;
   display: block;
   margin-right: 2.35765%;
@@ -245,7 +258,7 @@ section::after {
       float: left;
       display: block;
       margin-right: 2.35765%;
-      width: 23.23176%; }
+      width: 48.82117%; }
       .month .second-row .month__other:last-child {
         margin-right: 0; } }
 
@@ -254,52 +267,63 @@ section::after {
   font-size: 0.7em;
   background-color: #b0b0b0; }
 
+.featured__header .previous, .month__header .previous {
+  font-size: 0.8em;
+  margin-top: 3em;
+  display: none; }
+  @media screen and (min-width: 768px) {
+    .featured__header .previous, .month__header .previous {
+      display: block; } }
+  .featured__header .previous ul, .month__header .previous ul {
+    margin-top: 1em; }
+    .featured__header .previous ul li, .month__header .previous ul li {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 100%; }
+      .featured__header .previous ul li:last-child, .month__header .previous ul li:last-child {
+        margin-right: 0; }
+
 .page {
   width: 95%;
   margin: auto;
-  max-width: 1300px; }
+  max-width: 1200px; }
 
-.featured__article .first-row {
-  display: block; }
-  .featured__article .first-row::after {
-    clear: both;
-    content: "";
-    display: table; }
-.featured__article__image {
-  background: url("../img/jack.jpeg");
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  height: 100%; }
-  .featured__article__image h2 {
-    background: rgba(0, 0, 0, 0.74);
-    color: white;
-    opacity: 0.7;
-    font-size: 1.5em;
-    text-align: center; }
-.featured__article__comment {
-  margin-top: 1em; }
-  .featured__article__comment textarea {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 100%;
-    margin: 1em 0; }
-    .featured__article__comment textarea:last-child {
-      margin-right: 0; }
-  .featured__article__comment button {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 23.23176%;
-    font-size: 1em; }
-    .featured__article__comment button:last-child {
-      margin-right: 0; }
-  .featured__article__comment label {
-    font-weight: bold; }
+.featured__article {
+  border: 1px solid black; }
+  .featured__article .first-row {
+    display: block; }
+    .featured__article .first-row::after {
+      clear: both;
+      content: "";
+      display: table; }
+  .featured__article__image {
+    background: url("../img/jack.jpeg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 100%; }
+  .featured__article__comment {
+    margin-top: 1em; }
+    .featured__article__comment textarea {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 100%; }
+      .featured__article__comment textarea:last-child {
+        margin-right: 0; }
+    .featured__article__comment button {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 31.76157%;
+      font-size: 1em; }
+      .featured__article__comment button:last-child {
+        margin-right: 0; }
+    .featured__article__comment label {
+      font-weight: bold; }
 
 .month .first-row {
-  display: block;
-  margin-bottom: 1em; }
+  display: block; }
   .month .first-row::after {
     clear: both;
     content: "";
@@ -311,12 +335,6 @@ section::after {
       background-size: 100% 100%;
       background-repeat: no-repeat;
       height: 65%; }
-      .month .first-row .month__primary__image h2 {
-        background: rgba(0, 0, 0, 0.74);
-        color: white;
-        opacity: 0.7;
-        font-size: 1.5em;
-        text-align: center; }
     .month .first-row .month__primary p {
       height: 35%; }
   .month .first-row .month__secondary {
@@ -325,13 +343,7 @@ section::after {
       background: url("../img/jack-sm.jpg");
       background-size: 100% 100%;
       background-repeat: no-repeat;
-      height: 50%; }
-      .month .first-row .month__secondary__image h2 {
-        background: rgba(0, 0, 0, 0.74);
-        color: white;
-        opacity: 0.7;
-        font-size: 1.5em;
-        text-align: center; }
+      height: 65%; }
     .month .first-row .month__secondary p {
       height: 50%; }
 .month .second-row {
@@ -342,10 +354,25 @@ section::after {
     display: table; }
   .month .second-row .month__other {
     margin-bottom: 1em; }
-    .month .second-row .month__other h1 {
-      background: rgba(0, 0, 0, 0.74);
-      color: white;
-      padding-left: 1em; }
+.month .third-row {
+  display: block; }
+  .month .third-row::after {
+    clear: both;
+    content: "";
+    display: table; }
+  .month .third-row .month__other {
+    margin-bottom: 1em;
+    border: 1px solid black; }
+
+.sidebar {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 14.70196%;
+  background-color: black;
+  height: 100vh; }
+  .sidebar:last-child {
+    margin-right: 0; }
 
 header img {
   width: 100%; }
